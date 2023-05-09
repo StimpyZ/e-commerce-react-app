@@ -1,0 +1,186 @@
+.cart {
+  background: rgb(43, 43, 43);
+  overflow-y: auto;
+  padding: 32px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  width: 500px;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in-out;
+  min-height: calc(100vh - 50px);
+}
+
+.cart > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 1rem;
+}
+
+.cart ul li {
+  display: flex;
+}
+
+.clear-button-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.cart img {
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.cart li {
+  padding: 1rem;
+  border: 2px solid white;
+  margin-bottom: 2rem;
+}
+
+.cart .pie {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-button {
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  height: 32px;
+  justify-content: center;
+  padding: 4px;
+  right: 8px;
+  top: 8px;
+  transition: all 0.3s ease;
+  width: 32px;
+}
+
+.quantity {
+  text-align: center;
+  border: 1px solid white;
+}
+
+.cart-button:hover {
+  scale: 1.1;
+}
+
+.cart-button ~ input:checked ~ .cart {
+  height: 100%;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.clear-button button {
+  width: 100%;
+  border: 1px solid white;
+  margin-bottom: 2rem;
+}
+
+.button-close {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.button-close h2 {
+  margin: 0;
+  color: white;
+}
+
+.button-close label {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  height: 24px;
+}
+.cart-item {
+  width: 30%;
+  height: 140px;
+}
+
+.cart-info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: initial;
+}
+
+.cart-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  gap: 0.7rem;
+}
+
+.cart-price strong {
+  color: white;
+}
+
+.pie button {
+  margin: 0;
+  height: 55px;
+  text-align: center;
+  border-radius: 0;
+}
+
+.pie p {
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  outline-offset: -2px;
+  margin: 0;
+}
+
+.subtotal {
+  border-top: 2px dashed white;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+
+@media (max-width: 600px) {
+  .cart {
+    width: 100%;
+  }
+  .cart-item {
+    width: 100%;
+  }
+  .cart-info {
+    width: 100%;
+  }
+  .cart-price {
+    width: 100%;
+  }
+  .cart-price strong {
+    font-size: 1rem;
+  }
+  .cart-price p {
+    font-size: 1rem;
+  }
+  .cart-price button {
+    font-size: 1rem;
+  }
+  .cart-price p {
+    font-size: 1rem;
+  }
+}

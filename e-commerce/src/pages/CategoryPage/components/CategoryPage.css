@@ -1,0 +1,31 @@
+.category-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.title-home {
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.title-home > a:hover {
+  text-decoration: underline;
+}
+
+.title-home h2 {
+  margin: 0 auto;
+}
+
+.title-home a {
+  display: flex;
+  align-items: center;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: green;
+}
+

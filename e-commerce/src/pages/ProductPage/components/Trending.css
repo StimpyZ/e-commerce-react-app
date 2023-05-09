@@ -1,0 +1,72 @@
+.media-scroller {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 18.8%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  margin-bottom: 2rem;
+}
+
+.media-element {
+  padding: 1rem;
+  outline: 2px solid rgba(0, 0, 0, 0.205);
+  outline-offset: -2px;
+  cursor: pointer;
+  display: grid;
+  grid-template-rows: min-content;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.media-element:hover {
+  outline: 2px solid #000;
+}
+
+.media-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.media-element h3 {
+  margin: 0;
+}
+
+.media-element > img {
+  inline-size: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+}
+
+.snaps-inline *  {
+  scroll-snap-align: start;
+}
+
+@media (max-width: 1000px) {
+  .media-scroller {
+    grid-auto-columns: 23.6%;
+  }
+}
+
+@media (max-width: 850px) {
+  .media-scroller {
+    grid-auto-columns: 31.8%;
+  }
+}
+
+@media (max-width: 600px) {
+  .media-scroller {
+    grid-auto-columns: 50%;
+  }
+}
+
+@media (max-width: 400px) {
+  .media-scroller {
+    grid-auto-columns: 100%;
+  }
+}
