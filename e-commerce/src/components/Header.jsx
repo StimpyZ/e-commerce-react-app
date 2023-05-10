@@ -6,6 +6,7 @@ import { Cart } from './Cart'
 
 export function Header () {
   const { navHeight } = useScroll()
+
   return (
     <>
       <nav className={`navMenu ${navHeight === 80 ? 'small' : 'large'}`}>

@@ -3,14 +3,21 @@ import { CartItem } from './CartItem'
 import './Cart.css'
 import { useCart } from '../hooks/useCart'
 import CloseIcon from '@mui/icons-material/Close'
+import ErrorIcon from '@mui/icons-material/Error'
+import { useIcon } from '../hooks/useIcon'
 
 export function Cart () {
   const { cart, clearCart, calculateTotal } = useCart()
   const total = calculateTotal().toFixed(2)
+  const { showIcon } = useIcon()
+
   return (
     <>
       <label className='cart-button' htmlFor='cartCheckboxId'>
-        <CartIcon />
+        <div className='cart-info'>
+          {showIcon && <ErrorIcon className='icon-info' />}
+          <CartIcon />
+        </div>
       </label>
       <input
         type='checkbox'

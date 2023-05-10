@@ -29,9 +29,9 @@ export function ProductPage () {
             Home
           </div>
         </Link>
+        <h1>{productById.title}</h1>
         <div className='product-div'>
           <div className='product-left'>
-            <h1>{productById.title}</h1>
             <div className='big-img'>
               <img src={productById.image} />
             </div>

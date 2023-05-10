@@ -7,6 +7,7 @@ export function Trending () {
   return (
     <div className='trending'>
       <div className='container'>
+        <h2>Trending right now</h2>
         <div className='media-scroller snaps-inline'>
           {
           products.slice(0, 12).map(item => (
