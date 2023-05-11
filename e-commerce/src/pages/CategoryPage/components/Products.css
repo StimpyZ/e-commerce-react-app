@@ -13,3 +13,13 @@
   font-weight: bold;
   max-width: 300px;
 }
+
+.product2:hover {
+  outline: #000 solid 2px;
+}
+
+@media (max-width: 600px) {
+  .products-grid2 {
+    justify-items: center;
+  }
+}
