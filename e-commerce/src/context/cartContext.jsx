@@ -17,8 +17,10 @@ export function CartProvider ({ children }) {
       }
       setCart(newCart)
     } else {
-      setCart(prevState =>
-        [...prevState, { ...product, quantity, totalPrice: product.price * quantity }])
+      setCart(prevState => [
+        ...prevState,
+        { ...product, quantity, totalPrice: product.price * quantity }
+      ])
     }
   }
 

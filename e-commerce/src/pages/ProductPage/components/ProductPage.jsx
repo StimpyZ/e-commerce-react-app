@@ -19,6 +19,7 @@ export function ProductPage () {
   const productInCart = (product) => {
     return cart.some(item => item.id === product.id)
   }
+
   const isProductInCart = productInCart(productById)
   return (
     <div className='product-page-div'>
